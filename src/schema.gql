@@ -1,0 +1,27 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Commiter {
+  name: String!
+}
+
+type Commit {
+  message: String!
+  committer: Commiter!
+}
+
+type CommitResponse {
+  sha: String!
+  html_url: String!
+  commit: Commit!
+}
+
+type Query {
+  getCommits(page: Float, limit: Float): [CommitResponse!]!
+  ping: String!
+}
+
+type Mutation {
+  apikey: String!
+}
